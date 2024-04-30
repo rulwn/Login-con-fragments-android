@@ -1,6 +1,8 @@
 package raul.ochoa.emulador_20230159_raul
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,6 +18,10 @@ class fragment_login : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
+        val btnSiguientePantalla = findViewById<Button>(R.id.btnLogin)
+        btnSiguientePantalla.setOnClickListener {
+            val siguiente = Intent (this, MainActivity::class.java)
+            startActivity(siguiente)
+        }
     }
 }
